@@ -1,11 +1,10 @@
-FROM ubuntu:20.04
+FROM ubuntu:focal
 
 ARG VERSION=master
 
 WORKDIR /app
 
-RUN sed -i -e 's/http:\/\/archive\.ubuntu\.com\/ubuntu\//mirror:\/\/mirrors\.ubuntu\.com\/mirrors\.txt/' /etc/apt/sources.list \
-    && apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y \
         curl \
         unzip \
         moreutils \
