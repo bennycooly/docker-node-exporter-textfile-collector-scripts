@@ -1,0 +1,17 @@
+kind: pipeline
+type: kubernetes
+name: node-exporter-textfile-collector-scripts
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+  - name: docker
+    image: plugins/docker
+    settings:
+      repo: bennycooly/node-exporter-textfile-collector-scripts
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
