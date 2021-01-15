@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
         unzip \
         moreutils \
         cron \
+        python3 \
         smartmontools \
     && curl -LO https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/archive/${VERSION}.zip \
     && unzip ${VERSION}.zip \
