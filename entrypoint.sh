@@ -1,6 +1,6 @@
 #!/bin/bash
 
-COMMAND=${COMMAND:'echo "Hello world"'}
+COMMAND=${COMMAND:-'echo "Hello world"'}
 
 INTERVAL=${INTERVAL:'*/5 * * * *'}
 
